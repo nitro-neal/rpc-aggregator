@@ -4,7 +4,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 
 let cur = 0;
-const servers = ["https://rpc-juno.itastakers.com", "https://rpc-juno.nodes.guru", "https://rpc-juno.nodes.guruzz"];
+const servers = ["https://rpc-juno.itastakers.com", "https://rpc-juno.nodes.guru"];
 let serverTracking = {}
 
 
