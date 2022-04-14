@@ -58,7 +58,7 @@ const handler = async (req, res) => {
                 serverTracking[curServer].errorCount++
             } catch (err2) {
                 console.log("Caught final error: ")
-                res.send({ error: "server error" })
+                res.send({ status: "RPC Aggregator Up!" })
             }
         }
 
