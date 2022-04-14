@@ -80,6 +80,7 @@ server.get('*', handler).post('*', handler);
 
 server.get('/info', info)
 
-server.listen(9100, () =>
-    console.log('Example app listening on port 9100!'),
+const port = process.env.PORT || 9100;
+server.listen(port, () =>
+    console.log('RPC Aggregator listening on port: ' + port),
 );
