@@ -41,6 +41,7 @@ const handler = async (req, res) => {
 
             data = await response.json()
             serverTracking[curServer].latency = (Date.now() - serverTracking[curServer].startTime)
+            res.send(data)
 
         } catch (err) {
 
@@ -54,15 +55,15 @@ const handler = async (req, res) => {
                 });
 
                 data = await response.json()
-
                 serverTracking[curServer].errorCount++
+                res.send(data)
             } catch (err2) {
                 console.log("Caught final error: ")
                 res.send({ status: "RPC Aggregator Up!" })
             }
         }
 
-        res.send(data)
+
     }
 };
 
